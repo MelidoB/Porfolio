@@ -24,18 +24,21 @@ const About = () => (
       {/* Personal Info & Skills */}
       <div className="flex flex-col lg:flex-row gap-6 mt-8">
         {/* Personal Info */}
-        <div className="flex-1">
+          <div className="flex-1">
 
-          <div className="mt-4 flex gap-4 justify-center sm:justify-start">
-            <button className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">
-              Download CV
-            </button>
-            <button className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">
-              Hire me
-            </button>
+            <div className="mt-4 flex gap-4 justify-center sm:justify-start">
+              <a 
+                href="https://github.com/MelidoB/Resume/raw/main/Melido_Bello_Resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold"
+              >
+                Download CV
+              </a>
+              
+            </div>
           </div>
-        </div>
-        {/* Skills */}
+          {/* Skills */}
         <div className="flex-1">
           <div className="flex flex-wrap gap-2">
             <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Python</span>
