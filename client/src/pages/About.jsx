@@ -1,5 +1,6 @@
 import React from 'react';
-
+import CertificationImage from '../assets/about/certificate.png';
+import FRCImage from '../assets/about/robot.jpg';
 const About = () => (
   <div className="w-full min-h-screen flex flex-col bg-gray-100 dark:bg-black dark:text-white">
     <div className="max-w-screen-xl mx-auto px-4 sm:px-10 py-10">
@@ -24,18 +25,7 @@ const About = () => (
       <div className="flex flex-col lg:flex-row gap-6 mt-8">
         {/* Personal Info */}
         <div className="flex-1">
-          <ul className="text-gray-900 dark:text-gray-200 font-serif space-y-2">
-            <li className="py-2 border-b border-gray-200 dark:border-gray-600">
-              <span className="font-bold">Degree:</span> BSc. Computer Science
-            </li>
-            <li className="py-2 border-b border-gray-200 dark:border-gray-600">
-              <span className="font-bold">Location:</span> New York, NY
-            </li>
-            <li className="py-2 border-b border-gray-200 dark:border-gray-600">
-              <span className="font-bold">Email:</span> <span className="ml-1">enrriquebello10@gmail.com</span>
-            </li>
-            
-          </ul>
+
           <div className="mt-4 flex gap-4 justify-center sm:justify-start">
             <button className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">
               Download CV
@@ -108,7 +98,7 @@ const About = () => (
           <h3 className="text-3xl font-bold mb-4">Certifications</h3>
           {/* Certification image slot */}
           <img
-            src="https://dummyimage.com/200x200?text=Certificate"
+            src={CertificationImage}
             alt="Certification"
             className="w-32 h-32 object-contain mb-4"
           />
@@ -117,7 +107,7 @@ const About = () => (
           </p>
           {/* Certification link */}
           <a 
-            href="https://example.com/certificate-link" 
+            href="https://github.com/MelidoB/Oracle-Cloud-Infrastructure-Foundations?tab=readme-ov-file" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="mt-2 text-blue-500 hover:underline"
@@ -130,7 +120,7 @@ const About = () => (
           <h3 className="text-3xl font-bold mb-4">Associations</h3>
           {/* Association image slot */}
           <img
-            src="https://dummyimage.com/200x200?text=FRC"
+            src={FRCImage}
             alt="FIRST Robotics Competition"
             className="w-32 h-32 object-contain mb-4"
           />
@@ -140,7 +130,7 @@ const About = () => (
           </p>
           {/* Association link */}
           <a 
-            href="https://example.com/frc-info" 
+            href="https://www.nycfirst.org/frc" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="mt-2 text-blue-500 hover:underline"

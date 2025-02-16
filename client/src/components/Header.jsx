@@ -13,7 +13,7 @@ const Header = () => (
         <Link to="/contact">Contact</Link>
         <div className="flex space-x-4">
         
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/MelidoB" target="_blank" rel="noopener noreferrer">
           <FaGithub size={28} />
         </a>
       </div>
