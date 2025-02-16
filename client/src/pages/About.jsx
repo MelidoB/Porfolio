@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 function About() {
+  const [preview, setPreview] = useState(null);
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setPreview(URL.createObjectURL(file));
+    }
+  };
+
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-3xl font-bold mb-4">About Me</h2>
+    <div className="space-y-8">
+      <h2 className="text-3xl font-bold text-center">About Me</h2>
       
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Melido Bello</h3>
+      {/* Personal Details */}
+      <div className="bg-white shadow p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold mb-2">Melido Bello</h3>
         <p><strong>Location:</strong> New York, NY</p>
         <p>
           <strong>Email:</strong>{" "}
@@ -37,77 +47,55 @@ function About() {
             github.com/MelidoB
           </a>
         </p>
-      </section>
+      </div>
 
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Education</h3>
+      {/* Education & Skills */}
+      <div className="bg-white shadow p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold mb-2">Education & Skills</h3>
         <p>
-          <strong>City College of New York (CCNY), CUNY</strong> — Bachelor of Science in Computer Science 
+          <strong>City College of New York (CCNY), CUNY</strong> — Bachelor of Science in Computer Science
           <span className="block">Expected: Jan 2025</span>
         </p>
-        <p>
-          <strong>Relevant Coursework:</strong> Software Engineering, Algorithms, Data Structures, 
-          Computer Organization, Python Programming
-        </p>
-      </section>
+        <p><strong>Relevant Coursework:</strong> Software Engineering, Algorithms, Data Structures, Computer Organization, Python Programming</p>
+        <p><strong>Programming:</strong> Python, Next.js, Flask, Tailwind CSS</p>
+        <p><strong>Technologies:</strong> AWS Connect, Amazon S3, Firebase, VS Code, Git/GitHub, Microsoft Office</p>
+        <p><strong>Certification:</strong> Oracle Cloud Infrastructure 2024 Certified Foundations Associate</p>
+        <p><strong>Languages:</strong> Spanish (Native), English (Fluent)</p>
+      </div>
 
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Skills & Certifications</h3>
-        <p>
-          <strong>Programming:</strong> Python, Next.js, Flask, Tailwind CSS
-        </p>
-        <p>
-          <strong>Technologies:</strong> AWS Connect, Amazon S3, Firebase, Visual Studio Code, Git/GitHub, Microsoft Office
-        </p>
-        <p>
-          <strong>Certification:</strong> Oracle Cloud Infrastructure 2024 Certified Foundations Associate
-        </p>
-        <p>
-          <strong>Languages:</strong> Spanish (Native), English (Fluent)
-        </p>
-      </section>
+      {/* Resume Download */}
+      <div className="bg-white shadow p-6 rounded-lg text-center">
+        <h3 className="text-2xl font-semibold mb-4">Resume</h3>
+        <a 
+          href="/resume.pdf" 
+          download 
+          className="inline-block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+        >
+          Download Resume (PDF)
+        </a>
+      </div>
 
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Projects</h3>
-        <p>
-          <strong>Sole Sphere - Web App</strong> (Sept 2023 - Jun 2024)
-        </p>
-        <ul className="list-disc ml-6">
-          <li>Built an efficient e-commerce platform for buying, selling, and trading sneakers.</li>
-          <li>Implemented a multi-service architecture using React, Flask, Firebase, Google Cloud, Docker, and Tailwind CSS.</li>
-          <li>Integrated Google login and ChatGPT for personalized recommendations.</li>
-        </ul>
-      </section>
-
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Work History</h3>
-        <p>
-          <strong>Basic Moving, Brooklyn, NY</strong> — Mover (Summer 2023 & Summer 2024)
-        </p>
-        <ul className="list-disc ml-6">
-          <li>Safely packed, transported, and unpacked fragile items, ensuring damage-free delivery.</li>
-          <li>Managed a fast-paced workload with a 3-5 person team.</li>
-        </ul>
-        <p>
-          <strong>NYPL, New York, NY</strong> — STEM Intern (Jun 2019 - Aug 2019)
-        </p>
-        <ul className="list-disc ml-6">
-          <li>Guided STEAM projects and taught fundamental engineering concepts.</li>
-          <li>Assisted in developing a water temperature regulation device for safety applications.</li>
-        </ul>
-      </section>
-
-      <section className="mb-6">
-        <h3 className="text-2xl font-semibold">Associations</h3>
-        <p>
-          <strong>FIRST Robotics Competition (FRC)</strong> (Jan 2017 – Dec 2018)
-        </p>
-        <ul className="list-disc ml-6">
-          <li>Programmed and operated robots, coordinating with team members for competitive success.</li>
-        </ul>
-      </section>
+      {/* Image Upload Section */}
+      <div className="bg-white shadow p-6 rounded-lg">
+        <h3 className="text-2xl font-semibold mb-4 text-center">Upload Profile Image</h3>
+        <div className="flex flex-col items-center">
+          {preview ? (
+            <img src={preview} alt="Profile Preview" className="w-32 h-32 object-cover rounded-full mb-4" />
+          ) : (
+            <div className="w-32 h-32 flex items-center justify-center bg-gray-200 rounded-full mb-4">
+              <span className="text-gray-500">No Image</span>
+            </div>
+          )}
+          <input 
+            type="file" 
+            accept="image/*" 
+            onChange={handleImageUpload}
+            className="block"
+          />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

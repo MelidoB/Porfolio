@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function ProjectCard({ title, description, link }) {
   return (
-    <div className="border rounded-lg shadow p-4 hover:shadow-lg transition duration-200">
+    <div className="bg-white border rounded-lg shadow p-4 hover:shadow-xl transition duration-200">
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-700 mb-4">{description}</p>
       <a 
@@ -14,7 +14,7 @@ function ProjectCard({ title, description, link }) {
         View Project
       </a>
     </div>
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
