@@ -7,8 +7,8 @@ const Contact = () => {
       <div className="bg-white shadow p-6 rounded-lg max-w-md mx-auto text-center">
         <p>
           <strong>Email:</strong> 
-          <a href="mailto:your.email@example.com" className="text-blue-500 hover:underline ml-1">
-            your.email@example.com
+          <a href="mailto:enrriquebello10@gmail.com" className="text-blue-500 hover:underline ml-1">
+            enrriquebello10@gmail.com
           </a>
         </p>
         {/* You can add more contact details if needed */}

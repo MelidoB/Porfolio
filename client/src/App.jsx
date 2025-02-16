@@ -9,16 +9,18 @@ import Projects from './pages/Projects'
 
 const App = () => (
   <Router>
-    <Header />
-    <main className="max-w-screen-xl mx-auto px-4">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </main>
-    <Footer />
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow max-w-screen-xl mx-auto px-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   </Router>
 )
 

@@ -24,18 +24,21 @@ const About = () => (
       {/* Personal Info & Skills */}
       <div className="flex flex-col lg:flex-row gap-6 mt-8">
         {/* Personal Info */}
-        <div className="flex-1">
+          <div className="flex-1">
 
-          <div className="mt-4 flex gap-4 justify-center sm:justify-start">
-            <button className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">
-              Download CV
-            </button>
-            <button className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">
-              Hire me
-            </button>
+            <div className="mt-4 flex gap-4 justify-center sm:justify-start">
+              <a 
+                href="https://github.com/MelidoB/Resume/raw/main/Melido_Bello_Resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold"
+              >
+                Download CV
+              </a>
+              
+            </div>
           </div>
-        </div>
-        {/* Skills */}
+          {/* Skills */}
         <div className="flex-1">
           <div className="flex flex-wrap gap-2">
             <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Python</span>
@@ -66,31 +69,7 @@ const About = () => (
         </div>
       </div>
 
-      {/* Experience Section */}
-      <div className="mt-12">
-        <h3 className="text-3xl font-bold mb-4">Experience</h3>
-        <div className="bg-white dark:bg-gray-800 shadow p-6 rounded-lg space-y-4">
-          <div>
-            <p>
-              <strong>Basic Moving, Brooklyn, NY</strong> — Mover
-              <span className="block text-gray-600 dark:text-gray-300">Summer 2023 &amp; Summer 2024</span>
-            </p>
-            <p className="mt-1">
-              Safely packed, transported, and unpacked fragile items ensuring damage-free delivery.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>NYPL (The New York Public Library), New York, NY</strong> — STEM Intern
-              <span className="block text-gray-600 dark:text-gray-300">Jun 2019 - Aug 2019</span>
-            </p>
-            <p className="mt-1">
-              Guided students in STEAM projects and assisted in developing a water temperature regulation device.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      
       {/* Certifications & Associations */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Certifications */}
