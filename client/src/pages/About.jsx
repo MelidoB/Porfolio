@@ -69,31 +69,7 @@ const About = () => (
         </div>
       </div>
 
-      {/* Experience Section */}
-      <div className="mt-12">
-        <h3 className="text-3xl font-bold mb-4">Experience</h3>
-        <div className="bg-white dark:bg-gray-800 shadow p-6 rounded-lg space-y-4">
-          <div>
-            <p>
-              <strong>Basic Moving, Brooklyn, NY</strong> — Mover
-              <span className="block text-gray-600 dark:text-gray-300">Summer 2023 &amp; Summer 2024</span>
-            </p>
-            <p className="mt-1">
-              Safely packed, transported, and unpacked fragile items ensuring damage-free delivery.
-            </p>
-          </div>
-          <div>
-            <p>
-              <strong>NYPL (The New York Public Library), New York, NY</strong> — STEM Intern
-              <span className="block text-gray-600 dark:text-gray-300">Jun 2019 - Aug 2019</span>
-            </p>
-            <p className="mt-1">
-              Guided students in STEAM projects and assisted in developing a water temperature regulation device.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      
       {/* Certifications & Associations */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Certifications */}
