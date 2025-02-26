@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MeImage from '../assets/Home/Me.jpg';
 
 function HeroSection() {
@@ -27,21 +28,22 @@ function HeroSection() {
             creativity with functionality.
           </p>
           <div className="flex justify-center space-x-4">
-            <a
-              href="/projects"
-              className="inline-flex text-white bg-indigo-500 border-0 py-2 px-4 sm:px-6 
-                         focus:outline-none hover:bg-indigo-600 rounded text-sm sm:text-lg"
-            >
-              View Projects
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-4 sm:px-6 
-                         focus:outline-none hover:bg-gray-200 rounded text-sm sm:text-lg"
-            >
-              Contact Me
-            </a>
-          </div>
+  <Link
+    to="/projects"
+    className="inline-flex text-white bg-indigo-500 border-0 py-2 px-4 sm:px-6 
+               focus:outline-none hover:bg-indigo-600 rounded text-sm sm:text-lg"
+  >
+    View Projects
+  </Link>
+  <Link
+    to="/contact"
+    className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-4 sm:px-6 
+               focus:outline-none hover:bg-gray-200 rounded text-sm sm:text-lg"
+  >
+    Contact Me
+  </Link>
+</div>
+
         </div>
         {/* 
           Make sure the image is constrained to full width on small screens
